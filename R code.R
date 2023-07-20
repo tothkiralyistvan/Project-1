@@ -13,3 +13,8 @@ library(skimr)
 
 # Read in data
 data1 <- read_sav("location")
+
+# Explore data
+View(data1)
+names(data1)
+summary(data1)
