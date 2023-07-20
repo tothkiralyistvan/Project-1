@@ -10,3 +10,6 @@ library(sjstats)
 library(psych)
 library(summarytools)
 library(skimr)
+
+# Read in data
+data1 <- read_sav("location")
