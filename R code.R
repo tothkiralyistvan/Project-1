@@ -21,3 +21,7 @@ summary(data1)
 
 # Frequencies of variables that need recoding based on summary()
 freq(data1$age)
+
+# Recode age
+data1 <- data1 %>% 
+  mutate(age = ifelse(age < 18 | age > 74, NA, age))
