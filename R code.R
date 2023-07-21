@@ -18,3 +18,6 @@ data1 <- read_sav("location")
 View(data1)
 names(data1)
 summary(data1)
+
+# Frequencies of variables that need recoding based on summary()
+freq(data1$age)
