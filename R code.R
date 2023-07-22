@@ -39,13 +39,13 @@ data1 <- data1 %>%
     vars(iden1, iden2, iden3, iden5),
     ~ ifelse(. < 1 | . > 7, NA, .))
 
-# Get frequencies for select variables
+# Get frequencies for select variables to verify changes
 data1 %>% 
   select(att3, att4, att5) %>% 
   mutate_all(as.factor) %>% 
   freq()
 
-# Get frequencies for all variables
+# Get frequencies for all variables to verify them
 data1 %>% 
   select(att3, att4, att5) %>% 
 #  mutate_all(as.factor) %>% 
