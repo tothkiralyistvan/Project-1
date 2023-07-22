@@ -32,3 +32,9 @@ freq(data1$relationship)
 # Recode relationship status
 data1 <- data1 %>% 
   mutate(relationship = ifelse(relationship > 3, NA, relationship))
+
+# Recode the 'iden' outlier values to NAs
+data1 <- data1 %>%
+  mutate_at(
+    vars(iden1, iden2, iden3, iden5),
+    ~ ifelse(. < 1 | . > 7, NA, .))
