@@ -64,3 +64,25 @@ averages <- data1 %>%
             persis = mean_n(select(., all_of(list_persis)), n = .5),
             selfde = mean_n(select(., all_of(list_selfde)), n = .5),
             socint = mean_n(select(., all_of(list_socint)), n = .5))
+
+# Calculate Cronbach's alpha for the scales
+# Uses the same list functionality 
+data1 %>% 
+  select(list_identi) %>% 
+  alpha()
+
+data1 %>% 
+  select(list_overus) %>% 
+  alpha()
+
+data1 %>% 
+  select(list_persis) %>% 
+  alpha()
+
+data1 %>% 
+  select(list_selfde) %>% 
+  alpha()
+
+data1 %>% 
+  select(list_socint) %>% 
+  alpha()
