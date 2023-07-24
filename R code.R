@@ -86,3 +86,16 @@ data1 %>%
 data1 %>% 
   select(list_socint) %>% 
   alpha()
+
+# Get descriptive statistics one way
+averages %>% 
+  describe()
+
+# Get descriptive statistics the other way
+averages %>% 
+  descr()
+
+# Correlations between the newly calculated variables
+averages %>% 
+  corr.test() %>% 
+  print(short = FALSE)  # include to get confidence intervals
