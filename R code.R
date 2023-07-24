@@ -47,3 +47,10 @@ data1 %>%
   select(att3, att4, att5) %>% 
 #  mutate_all(as.factor) %>% 
   freq()
+
+# create variable lists for documentation and computation of averages
+list_persis <- c("att4", "att5", "att6")
+list_identi <- c("iden1", "iden2", "iden3")
+list_socint <- c("off2", "off3", "off4")
+list_overus <- c("over1", "over3", "over4")
+list_selfde <- c("self1", "self2", "self6")
