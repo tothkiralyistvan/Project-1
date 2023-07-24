@@ -54,3 +54,13 @@ list_identi <- c("iden1", "iden2", "iden3")
 list_socint <- c("off2", "off3", "off4")
 list_overus <- c("over1", "over3", "over4")
 list_selfde <- c("self1", "self2", "self6")
+
+# Calculate mean for specified variables
+# They need to have at least 50% of responses
+# transmute = creates a new data frame
+averages <- data1 %>%
+  transmute(identi = mean_n(select(., all_of(list_identi)), n = .5),
+            overus = mean_n(select(., all_of(list_overus)), n = .5),
+            persis = mean_n(select(., all_of(list_persis)), n = .5),
+            selfde = mean_n(select(., all_of(list_selfde)), n = .5),
+            socint = mean_n(select(., all_of(list_socint)), n = .5))
